@@ -48,4 +48,3 @@ type Pattern struct {
 	Static  Static   `yaml:"static"`
 	App     []string `yaml:"app"`
 }
-
