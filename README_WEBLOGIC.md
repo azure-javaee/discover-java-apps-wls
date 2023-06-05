@@ -12,7 +12,7 @@ A script to discover java apps from your linux system by following steps:
 
 ## Download and run
 
-Download the binary files from [releases](https://github.com/Azure/azure-weblogic-java-apps/releases)
+Download the binary files from [releases](https://github.com/Azure/discover-java-apps/releases)
 
 - For Linux:
 
@@ -29,13 +29,13 @@ weblogic.exe -server 'servername' -port 'port' -username 'userwithsudo' -passwor
 - For Mac (Intel chip):
 
 ```bash
-weblogic-darwin-amd64 -server 'servername' -port 'port' -username 'userwithsudo' -password 'password' -weblogicusername "weblogic" -weblogicpassword "weblogicpassword"
+weblogic_darwin_amd64 -server 'servername' -port 'port' -username 'userwithsudo' -password 'password' -weblogicusername "weblogic" -weblogicpassword "weblogicpassword"
 ```
 
 - For Mac (Apple silicon):
 
 ```bash
-weblogic-darwin-arm64 -server 'servername' -port 'port' -username 'userwithsudo' -password 'password' -weblogicusername "weblogic" -weblogicpassword "weblogicpassword"
+weblogic_darwin_arm64 -server 'servername' -port 'port' -username 'userwithsudo' -password 'password' -weblogicusername "weblogic" -weblogicpassword "weblogicpassword"
 ```
 
 > You can find the running log from __weblogic.log__ in the same folder
