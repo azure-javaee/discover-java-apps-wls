@@ -20,6 +20,8 @@ type WeblogicCliApp struct {
 	DeploymentTarget  string `json:"deploymentTarget" csv:"DeploymentTarget"`
 	RuntimeJdkVersion string `json:"runtimeJdkVersion" csv:"RuntimeJdkVersion"`
 	ServerType        string `json:"serverType" csv:"ServerType"`
+	OracleHome        string `json:"oracleHome" csv:"OracleHome"`
+	DomainHome        string `json:"domainHome" csv:"DomainHome"`
 }
 
 type weblogicAppConverter struct {
@@ -54,6 +56,8 @@ func (s weblogicAppConverter) Convert(apps []*weblogic.WeblogicApp) []*WeblogicC
 			WeblogicPatches:   app.WeblogicPatches,
 			JarFileLocation:   app.AppFileLocation,
 			RuntimeJdkVersion: app.RuntimeJdkVersion,
+			OracleHome:        app.OracleHome,
+			DomainHome:        app.DomainHome,
 
 			LastModifiedTime: app.LastModifiedTime.UTC().Format(time.RFC3339),
 		})

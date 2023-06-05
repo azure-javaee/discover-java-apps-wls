@@ -99,6 +99,9 @@ func (s *webLogicDiscoveryExecutor) Discover(ctx context.Context, serverConnecti
 				app.WeblogicVersion = process.GetWeblogicVersion(domainHome)
 				app.WeblogicPatches = process.GetWeblogicPatch(domainHome)
 
+				app.OracleHome = oracleHome
+				app.DomainHome = domainHome
+
 				azureLogger.Info("finished to discover process, found app", "processId", process.GetProcessId(), "app", app.AppName)
 
 				apps = append(apps, app)

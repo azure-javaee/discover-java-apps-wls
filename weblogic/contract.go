@@ -106,6 +106,8 @@ type WeblogicApp struct {
 	AppPort            int       `json:"appPort"`
 	ContextRoot        string    `json:"contextRoot"`
 	LastModifiedTime   time.Time `json:"lastModifiedTime"`
+	OracleHome         string    `json:"oracleHome"`
+	DomainHome         string    `json:"domainHome"`
 }
 
 type DiscoveryExecutor interface {
