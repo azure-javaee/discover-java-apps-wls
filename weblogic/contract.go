@@ -52,7 +52,7 @@ type WebLogicProcess interface {
 	GetJavaHome() (string, error)
 	GetDiscoverDomainResult(Randomfolder string) string
 	CreateTempFolder() string
-	DeleteTempomFolder(path string) string
+	DeleteTempFolder(path string) string
 	Executor() ServerDiscovery
 }
 

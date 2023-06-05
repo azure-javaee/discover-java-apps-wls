@@ -50,6 +50,7 @@ func (s *webLogicDiscoveryExecutor) Discover(ctx context.Context, serverConnecti
 
 		tempfolderPath := process.CreateTempFolder()
 		println("tempfolderPath: " + tempfolderPath)
+		defer process.DeleteTempFolder(tempfolderPath)
 
 		weblogicName, _ := process.GetWeblogicName()
 		println("WeblogicServerName: " + weblogicName)
@@ -103,7 +104,7 @@ func (s *webLogicDiscoveryExecutor) Discover(ctx context.Context, serverConnecti
 				apps = append(apps, app)
 			}
 		}
-		process.DeleteTempomFolder(tempfolderPath)
+
 	} else {
 		println("No weblogic process detected")
 	}

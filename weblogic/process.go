@@ -121,7 +121,7 @@ func extractValues(input string) map[string]string {
 	return result
 }
 
-func (p *javaProcess) DeleteTempomFolder(path string) string {
+func (p *javaProcess) DeleteTempFolder(path string) string {
 
 	println("Deleting RandomFolder ....")
 
